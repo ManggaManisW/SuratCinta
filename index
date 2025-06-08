@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kejutan untuk Sayang</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap");
+      :root {
+        --color-bg: #fff6f8; /* very light pink cream */
+        --color-primary: #d6336c; /* rich sakura pink */
+        --color-primary-hover: #b02e5e; /* deeper pink */
+        --color-text: #5a2e3a; /* muted dark pink/burgundy for text */
+        --color-text-secondary: #a65c78; /* softer pinkish gray */
+        --color-card-bg: #ffe9f1; /* pastel pink */
+        --color-shadow: rgba(214, 51, 108, 0.15); /* soft pink shadow */
+        --border-radius: 12px;
+        --transition-speed: 0.3s;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--color-bg);
+        font-family: "Poppins", sans-serif;
+        color: var(--color-text);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 2rem;
+      }
+      .card {
+        background: var(--color-card-bg);
+        border-radius: var(--border-radius);
+        box-shadow: 0 12px 24px var(--color-shadow);
+        max-width: 420px;
+        width: 100%;
+        padding: 3rem 2rem 3.5rem 2rem;
+        text-align: center;
+      }
+      h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 0 0 1rem 0;
+        color: var(--color-primary);
+        line-height: 1.1;
+        user-select: none;
+      }
+      p.subtitle {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--color-text-secondary);
+        margin: 0 0 2.5rem 0;
+        user-select: none;
+      }
+      .btn-group {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-bottom: 0;
+      }
+      button {
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.75rem 2.25rem;
+        border: none;
+        border-radius: var(--border-radius);
+        transition: background-color var(--transition-speed), transform var(--transition-speed);
+        color: white;
+        background-color: var(--color-primary);
+        box-shadow: 0 6px 12px rgba(214, 51, 108, 0.3);
+        user-select: none;
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+      }
+      button:hover,
+      button:focus {
+        background-color: var(--color-primary-hover);
+        outline: none;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card" role="main" aria-labelledby="main-title">
+      <h1 id="main-title">Yasmine Sayang kamu mau telponan gak?</h1>
+      <p class="subtitle">Soalnya aku pengen telponan ama cewek cantikku</p>
+      <div class="btn-group" role="group" aria-label="Pilihan jawaban">
+        <button id="btn-yes" type="button" aria-label="Jawaban Iya">Iya</button>
+        <button id="btn-yes-mau" type="button" aria-label="Jawaban Iya mau">Iya mau</button>
+      </div>
+    </main>
+
+    <script>
+      const waLink = "https://wa.me/62895700619860";
+      function openWA() {
+        window.open(waLink, "_blank", "noopener,noreferrer");
+      }
+      document.getElementById("btn-yes").addEventListener("click", openWA);
+      document.getElementById("btn-yes-mau").addEventListener("click", openWA);
+    </script>
+  </body>
+</html>
